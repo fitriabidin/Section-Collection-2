@@ -1,0 +1,83 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; }
+
+body {
+  font-family: "Lato", sans-serif;
+  line-height: 1.6; }
+
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  overflow: hidden;
+  padding: 1rem 2rem; }
+
+.grid {
+  background-color: #ebebd3; }
+  .grid .container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    justify-content: center; }
+    .grid .container h1,
+    .grid .container h2 {
+      text-align: center;
+      font-size: 3rem;
+      font-family: "Montserrat", sans-serif; }
+    .grid .container h2 {
+      font-size: 1.5rem; }
+    .grid .container h4 {
+      text-align: center; }
+    .grid .container span {
+      color: #ef8354; }
+    .grid .container .cards {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-gap: 2rem;
+      margin-top: 3rem;
+      text-align: center;
+      color: black; }
+      .grid .container .cards .card {
+        background: white;
+        padding: 2rem 1rem;
+        box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.1), 0 4px 4px 0 rgba(0, 0, 0, 0.15);
+        cursor: pointer;
+        transition: all ease-in 300ms; }
+        .grid .container .cards .card:hover {
+          transform: translateY(-5px);
+          background: #083d77;
+          color: white; }
+          .grid .container .cards .card:hover i {
+            transition: 400ms;
+            border: 2px #bfc0c0 solid;
+            border-radius: 50%;
+            color: #bfc0c0; }
+        .grid .container .cards .card i {
+          border: 2px #083d77 solid;
+          padding: 2rem;
+          margin-bottom: 1rem;
+          color: #083d77; }
+        .grid .container .cards .card h3 {
+          margin-top: 0.75rem;
+          color: #ef8354; }
+
+@media (max-width: 768px) {
+  .grid .container {
+    height: 150vh; }
+    .grid .container .cards {
+      grid-template-columns: repeat(2, 1fr); } }
+
+@media (max-width: 500px) {
+  .grid .container {
+    height: 280vh; }
+    .grid .container .cards {
+      grid-template-columns: 1fr; } }
+
+@media (max-height: 680px) {
+  .grid .container {
+    height: 350vh; } }
+
+@media (max-height: 570px) {
+  .grid .container {
+    height: 400vh; } }
